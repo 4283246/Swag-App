@@ -2,18 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Swag_App.MainPage" Title="dotNetSwag Databinding">
-    
-    
+
     <ListView x:Name ="SwagAppListView"="{Binding dotNetSwag}"ItemTapped="SwagAppListView_ItemTapped"SelectionMode="HasUnevenRows"="True"
      
      <ListView.Tamplate>
         <DataTemplate x:DataType="dotNetSwag">
             <ViewCell>
-                
-
+               
                 <Grid>
 
-        
            <Grid.RowDefinitions>
                <RowDefinition Height="*"/>
                <RowDefinition Height="*"/>
