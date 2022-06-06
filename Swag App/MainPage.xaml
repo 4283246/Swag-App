@@ -3,56 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Swag_App.MainPage" Title="dotNetSwag Databinding">
 
-    <ListView x:Name ="SwagAppListView"="{Binding dotNetSwag}"ItemTapped="SwagAppListView_ItemTapped"SelectionMode="HasUnevenRows"="True"
-     
-     <ListView.Tamplate>
-        <DataTemplate x:DataType="dotNetSwag">
-            <ViewCell>
-               
-                <Grid>
+    <ListView x:Name ="SwagAppListView" ItemsSource="{Binding DotNetSwag}" ItemTapped="SwagAppListView_ItemTapped" SelectionMode="None"    HasUnevenRows="True">
+        
 
-           <Grid.RowDefinitions>
-               <RowDefinition Height="*"/>
-               <RowDefinition Height="*"/>
-               <RowDefinition Height="*"/>
-               <RowDefinition Height="*"/>
-               <RowDefinition Height="*"/>
-               <RowDefinition Height="*"/>
-           </Grid.RowDefinitions>
-            
-           <Grid.ColumnDefinitions>
-               <ColumnDefinition Width ="Auto" />
-               <ColumnDefinition Width ="2*" />
-               <ColumnDefinition Width ="*" />
-           <Grid.ColumnDefinition>
-               
-               <Label Text="name" Grid.Row="0" Grid.Column="0"></Label>
-           <Entry Grid.Row="0" Grid.Column="1"/>
-           <Label Text="Gender" Grid.Row="0 Grid.Column="0"/>
+    <ListView.ItemTemplate>
+        <DataTemplate >
+            <ViewCell>
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width ="Auto" />
+                            <ColumnDefinition Width ="2*" />
+                            <ColumnDefinition Width ="*" />
+                            </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0"></Label>
+                                <Entry Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="Gender" Grid.Row="0" Grid.Column="0"/>
              <Entry Grid.Row="0" Grid.Column="1"/>
-             <Label Text="T-shirt size" Grid.Row="0" Grid.Column="0/>
-             <Entry Grid.Row="0" Grid.Colum"1"/>
-            <Label Text="Date of order" Grid.Row="0" Grid.Column="0/>
+             <Label Text="T-shirt size" Grid.Row="0" Grid.Column="0"/>
+                                <Entry Grid.Row="0" Grid.Column =" 1"/>
+                                <Label Text="Date of order" Grid.Row="0" Grid.Column="0"/>
              <Entry Grid.Row="0" Grid.Column="1"/>
              <Label Text="T-shirt color" Grid.Row="0" Grid.Column="0"/>
              <Entry Grid.Row="0" Grid.Column="1"/>
              <Label Text="Shipping address" Grid.Row="0" Grid.Column="0"/>
              <Entry Grid.Row="0" Grid.Column="1"/>
                 
-                    
-                    
-                
-            
-  
-       
-  
-       
-       
-              
-             
-                   
-  
-               
-                
-          
+              </Grid>
+            </ViewCell>
+        </DataTemplate>
+        </ListView.ItemTemplate>
+        
+        
+    </ListView>
 
+
+</ContentPage>
